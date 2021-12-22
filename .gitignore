@@ -1,2 +1,4 @@
 *.pyc
-utpalsingh/__pycache__/
+*~
+*pyc
+utpalsingh/__pycache__/**
