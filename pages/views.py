@@ -10,6 +10,9 @@ def about(request):
 
 def contact(request):
     return render(request, "pages/contact.html", {"title": "Contact - Utpal Singh"})
+    
+def google_verification(request):
+    return render(request, "pages/googlea3fa796d88ba8a2b.html")
 
 
 
