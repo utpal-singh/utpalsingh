@@ -4,8 +4,8 @@ from django.shortcuts import render
 
 import requests
 
-from covid19.apis import current_day, hist_data
+from covid19.apis import covid19api
 
 def index(request):
-    results = requests.get(current_day)
+    results = requests.get(covid19api+"/summary")
     return render(request, "covid19/index.html", {"title": "Home - Utpal Singh", "results": results.json()})
