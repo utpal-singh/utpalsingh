@@ -40,20 +40,20 @@ global_stats = dict_results['Global']
 # t = threading.Thread(target=ping)
 # t.start() # this will run the `ping` function in a separate thread
 
-from apscheduler.schedulers.background import BackgroundScheduler
+# from apscheduler.schedulers.background import BackgroundScheduler
 
-scheduler = BackgroundScheduler()
-job = None
+# scheduler = BackgroundScheduler()
+# job = None
 
-def tick():
-    print('One tick!')
+# def tick():
+#     print('One tick!')
 
-def start_job():
-    global job
-    job = scheduler.add_job(tick, 'interval', seconds=5)
-    try:
-        scheduler.start()
-    except:
-        pass
+# def start_job():
+#     global job
+#     job = scheduler.add_job(tick, 'interval', seconds=5)
+#     try:
+#         scheduler.start()
+#     except:
+#         pass
 
-start_job()
+# start_job()
