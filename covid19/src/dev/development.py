@@ -21,7 +21,7 @@ def get_raw_data():
 
 def start_job():
     global job
-    job = scheduler.add_job(get_raw_data, 'interval', seconds=60)
+    job = scheduler.add_job(get_raw_data, 'interval', seconds=3600)
     try:
         scheduler.start()
     except:
