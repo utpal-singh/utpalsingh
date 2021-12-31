@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from covid19.src import summary
 
+from covid19.src.dev.development import get_raw_data
+
 
 # import requests
 
@@ -40,3 +42,9 @@ def index(request):
         global_stats = dict_results['Global']
         return render(request, "covid19/index.html", {"title": "Home - Utpal Singh", "date" : date, "datedayyr" : datedayyr, "timeh" : timeh, "timem" : timem, "times" : times, 'globalstats' : global_stats})
 
+def development(request):
+    # import requests
+    # apiHandler = "http://worldtimeapi.org/api/timezone/Asia/Kolkata"
+    # rawData = requests.get(apiHandler)
+    # dict_result = rawData.json()
+    return render(request, "covid19/development.html", {"variable" : get_raw_data})
