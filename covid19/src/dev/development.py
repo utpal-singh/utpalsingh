@@ -11,7 +11,6 @@ dict_results = rawData.json()
 from apscheduler.schedulers.background import BackgroundScheduler
 
 scheduler = BackgroundScheduler()
-job = None
 
 def get_raw_data():
     rawData = requests.get(apiHandler)
@@ -19,13 +18,13 @@ def get_raw_data():
     dict_results = rawData.json()
     return dict_results
 
-def start_job():
-    global job
-    job = scheduler.add_job(get_raw_data, 'interval', seconds=3600)
-    try:
-        scheduler.start()
-    except:
-        pass
 
-# start_job()
+scheduler.add_job(get_raw_data, 'interval', seconds=3600)
+results = get_raw_data()
+scheduler.start()
+
+
+
+
+
 

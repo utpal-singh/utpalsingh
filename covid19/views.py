@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from covid19.src import summary
 
-from covid19.src.dev.development import get_raw_data
+from covid19.src.dev.development import results
 
 
 # import requests
@@ -47,4 +47,4 @@ def development(request):
     # apiHandler = "http://worldtimeapi.org/api/timezone/Asia/Kolkata"
     # rawData = requests.get(apiHandler)
     # dict_result = rawData.json()
-    return render(request, "covid19/development.html", {"variable" : get_raw_data})
+    return render(request, "covid19/development.html", {"variable" : results})

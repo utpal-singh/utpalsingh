@@ -3,10 +3,10 @@ from covid19.src.apis import covid19api
 import requests
 import datetime
 import dateutil.parser
-from apscheduler.schedulers.background import BackgroundScheduler
+# from apscheduler.schedulers.background import BackgroundScheduler
 
-scheduler = BackgroundScheduler()
-job = None
+# scheduler = BackgroundScheduler()
+# job = None
 # import time
 
 # apiHandler = covid19api + "/summary"
@@ -67,12 +67,12 @@ def get_data():
 # def tick():
 #     print('One tick!')
 
-def start_job():
-    global job
-    job = scheduler.add_job(get_data, 'interval', seconds=3600)
-    try:
-        scheduler.start()
-    except:
-        pass
+# def start_job():
+#     global job
+#     job = scheduler.add_job(get_data, 'interval', seconds=3600)
+#     try:
+#         scheduler.start()
+#     except:
+#         pass
 
-start_job()
+# start_job()
