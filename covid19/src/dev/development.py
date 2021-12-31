@@ -1,27 +1,27 @@
-from covid19.src.dev.api_time import url
+# from covid19.src.dev.api_time import url
 
-import requests
+# import requests
 
-apiHandler = url
+# apiHandler = url
 
-rawData = requests.get(apiHandler)
+# rawData = requests.get(apiHandler)
 
-dict_results = rawData.json()
+# dict_results = rawData.json()
 
-from apscheduler.schedulers.background import BackgroundScheduler
+# from apscheduler.schedulers.background import BackgroundScheduler
 
-scheduler = BackgroundScheduler()
+# scheduler = BackgroundScheduler()
 
-def get_raw_data():
-    rawData = requests.get(apiHandler)
+# def get_raw_data():
+#     rawData = requests.get(apiHandler)
 
-    dict_results = rawData.json()
-    return dict_results
+#     dict_results = rawData.json()
+#     return dict_results
 
 
-scheduler.add_job(get_raw_data, 'interval', seconds=3600)
-results = get_raw_data()
-scheduler.start()
+# scheduler.add_job(get_raw_data, 'interval', seconds=3600)
+# results = get_raw_data()
+# scheduler.start()
 
 
 

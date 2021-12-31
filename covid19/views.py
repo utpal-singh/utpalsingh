@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from covid19.src import summary
 
-from covid19.src.dev.development import results
+# from covid19.src.dev.development import results
 
 
 # import requests
