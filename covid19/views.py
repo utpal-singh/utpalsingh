@@ -42,9 +42,9 @@ def index(request):
         # global_stats = dict_results['Global']
         # return render(request, "covid19/index.html", {"title": "Home - Utpal Singh", "date" : date, "datedayyr" : datedayyr, "timeh" : timeh, "timem" : timem, "times" : times, 'globalstats' : global_stats})
 
-def development(request):
-    # import requests
-    # apiHandler = "http://worldtimeapi.org/api/timezone/Asia/Kolkata"
-    # rawData = requests.get(apiHandler)
-    # dict_result = rawData.json()
-    return render(request, "covid19/development.html", {"variable" : results})
+# def development(request):
+#     # import requests
+#     # apiHandler = "http://worldtimeapi.org/api/timezone/Asia/Kolkata"
+#     # rawData = requests.get(apiHandler)
+#     # dict_result = rawData.json()
+#     return render(request, "covid19/development.html", {"variable" : results})
