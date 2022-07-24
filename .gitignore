@@ -8,7 +8,7 @@ utpalsingh/__pycache__/**
 *.pot
 *.pyc
 __pycache__
-*/__pycache__/*
+/*.pyc
 db.sqlite3
 media
 

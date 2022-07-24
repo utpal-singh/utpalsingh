@@ -2,7 +2,10 @@
 
 {% block content %}
 
-<h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel repudiandae enim dolor est, doloribus
-  laudantium facere laborum at nobis provident et quo eos corporis, error alias suscipit unde deleniti!</h1>
+<form action="cite" method="post">
+  {% csrf_token %}
+  DOI : <input type="text" name="doi" ><br><br>
+  <input type="submit" value="Submit">
+</form>
 
 {% endblock %}
