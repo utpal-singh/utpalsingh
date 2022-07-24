@@ -25,9 +25,15 @@ def cite(request):
         apiHandler = "https://api.crossref.org/works/" + doi_url
         rawdata = requests.get(apiHandler)
         dict_results = rawdata.json()
+        apa7th = dict_results["message"]["author"][0]["family"] + " " + \
+        dict_results["message"]["author"][0]["family"][:1] + ". " + \
+        str(dict_results["message"]["issued"]["date-parts"][0][0]) + ", " + \
+        dict_results["message"]["title"][0] + ", " + \
+        dict_results["message"]["container-title"][0] + ", " + \
+        dict_results["message"]["volume"] + dict_results["message"]["DOI"]
    
         dict = {
-           'doi_url': dict_results
+           'doi_url': apa7th
       }
     return render(request, 'cite.html', dict)   
 
